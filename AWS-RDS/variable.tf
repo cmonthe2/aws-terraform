@@ -27,7 +27,7 @@ variable "pass" {
 variable "multi_az_deployment" {
   description = "Enable or disable multi-az deployment"
   type        = bool
-  default     = false 
+  default     = false
 }
 
 //blocked public access
@@ -48,4 +48,20 @@ variable "delete_automated_backup" {
 variable "instance_class" {
   type    = string
   default = "db.t2.micro"
+}
+
+variable "rds_subnet1" {
+  description = "Enter the  private subnet id"
+  type        = string
+  default     = "subnet-02d11338e3ed245ab"
+}
+
+variable "rds_subnet2" {
+  description = "Enter the private subnet id"
+  type        = string
+  default     = "subnet-0c100fda21b481881"
+}
+
+variable "vpc_security_group_ids" {
+  default = "sg-05c7cd21eee611dd0"
 }
